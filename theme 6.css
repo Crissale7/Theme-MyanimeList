@@ -1,0 +1,1287 @@
+copia 2 de animelist
+
+{IMPORTANT:
+Change "SpaceCowboy" and 
+"DateYutaka" to your MyAnimeList username in the next two imports under this section. That will personalize HD preview pics and you should get a faster/smoother load time. The two imports begin with 
+@/import and are at lines 10 and 12 below.
+ 
+If needed, fix preview pics and layout problems with this topic:
+https://myanimelist.net/forum/?topicid=439897  
+}
+ 
+@\import "https://malscraper.azurewebsites.net/covers/anime/SpaceCowboy/presets/dataimagelink";
+ 
+@\import "https://malscraper.azurewebsites.net/covers/manga/DateYutaka/presets/dataimagelink";
+ 
+/* List design by 5cm with changes by Shishio-kun and Valerio_Lyndon*/
+ 
+@\import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700";
+
+
+/* BANNER IMAGES AND COLOR
+First image is the moon background, second is the character. To change background images: Upload the new background to Imgur or a similar site, then copy the direct link (or Original GIF link if it's animated) and paste it into the parenthesis. Save.
+Adjust the background position with the percentages. 
+
+Change the colors in the layout by replacing colors with the color you want.https://htmlcolorcodes.com/*/
+.header {
+	background-image: url(https://i.imgur.com/7yPWkzM.jpg);
+	background-color: black !important;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100%;
+	animation: MOON 7s linear 1;
+}
+@keyframes MOON {
+	0% {
+		background-position: center center;
+	}
+	40% {
+		background-position: center center;
+	}
+	100% {
+		background-position: center top;
+	}
+}
+body:after{
+	
+	background-color: transparent !important;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 74%;
+	pointer-events: none !important;
+	content: "";
+	display: block;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 480px;
+	position: absolute;
+	animation: SHINOBU 8s linear 1;
+	opacity: 1;
+}
+@keyframes SHINOBU {
+	0% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/* BANNER QUOTES
+The words after content control the quote text. You may have to adjust the width and padding-left/top to fit the quote differently.*/
+.header:before{
+	"content:"Good evening.";""
+	display: block;
+	font-size: 20px;
+	font-style: italic;
+	left: 0px;
+	padding-top: 200px !important;
+	padding-left: 100px;
+	height: 300px;
+	width: 30%;
+	color: white;
+	text-align: left;
+	position: absolute;
+	z-index: 7 !important;
+	animation: QUOTE 8s 1;
+	opacity: 1;
+	text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black;
+}
+
+
+.header:after{
+	"content:"It's a beautiful moon tonight, isn't it?";"
+	font-size: 20px;
+	font-style: italic;
+	left: 0px !important;
+	;
+	padding-top: 250px !important;
+	padding-left: 30px;
+	top: 0 !important;
+	position: absolute;
+	height: 300px;
+	width: 30%;
+	color: white;
+	text-align: left;
+	display: block;
+	z-index: 7 !important;
+	animation: QUOTE 8s 1;
+	text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black;
+}
+@keyframes QUOTE {
+	0% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+/* CHERRY BLOSSOMS ORIGINAL 
+Change the colors with the number after filter */
+body:before {
+	filter: hue-rotate(270deg);
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '';
+	width: 100%;
+	height: 480px;
+	background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwJyS5ynvs65fx92PPfbbm6Q),url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwAatFNRCD00nNBxGkbYWis8),url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwCr0R4dnPc3eTZN7ETlnfFM);
+	animation: SAKURA 10s linear infinite;
+	z-index: 6 !important;
+	pointer-events: none !important;
+}
+@keyframes SAKURA {
+	0% {
+		background-position: 0 0, 0 0, 0 0;
+	}
+	100% {
+		background-position: 500px 1000px, 400px 400px, 300px 300px;
+	}
+}
+
+
+/* BANNER AVATAR
+To change the background image: Upload the new background to Imgur or a similar site, then copy the direct link (or Original GIF link if it's animated) and paste it into the parenthesis. Save.*/
+#status-menu .status-menu:before {
+	background: center/cover url(https://64.media.tumblr.com/6a4080b70b28e0b6ce7b2d2507871610/830d0b5707b959ef-8d/s540x810/959fce0c95f762698939532a2d954e04dd23a190.gifv);
+}
+
+
+/* BANNER TEXT AND ICONS COLOR
+Change the color and fill (color for icons) by replacing #999 with the color you want. The last codes are for the search boxes.
+Get color codes here:https://htmlcolorcodes.com/
+*/
+
+.list-menu-float .icon-menu svg.icon,.list-menu-float .icon-menu.profile:before{
+	color: #999 !important;
+	fill: #999 !important;
+
+}
+
+.header .header-menu .header-info a,#header-menu-button,.header .header-menu .list-menu .icon-menu .text,
+#status-menu .status-button.on,.header .username,.header .header-menu.other .btn-menu,#header-menu-button{
+	color: white !important;
+	fill: white !important;
+
+}
+
+
+.header .header-menu .header-info a:hover, #header-menu-dropdown a:hover,.header .header-menu .header-info a:hover,.header .header-menu .list-menu .icon-menu .text:hover,.list-menu-float .icon-menu svg.icon:hover,.list-menu-float .icon-menu.profile:hover:before{
+	color: #10e0f9 !important;
+	fill: #10e0f9 !Important;
+}
+
+.header .header-menu .header-info a,#header-menu-button,.header .header-menu .list-menu .icon-menu .text,
+#status-menu .status-button.on,.header .username,.header .header-menu.other .btn-menu,#header-menu-button
+{text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black;}
+
+
+#search-box input {
+    background-image: url() !important;
+	  background-color: white !important;
+color:#999 !important;
+}
+
+
+.status-menu-container .search-container #search-button .fa {
+display: inherit !important;
+color:  #999 !important;
+position: absolute;
+left: 8px;
+font-size: 14px;
+}
+
+
+
+/* CATEGORY BAR COLOR
+Change the colors by replacing #1b0133 with the color you want. First color is for the category bar, and second color is for triangle under the category bar. Get color codes here:https://htmlcolorcodes.com/*/
+
+#status-menu, .status-menu-container.fixed,#status-menu .status-button {
+	background-color: #1b0133 ;
+}
+#status-menu .status-button.on::after{
+	border-top: 20px solid #1b0133 ;
+}
+/* CATEGORY LINK COLORS
+Change the colors by replacing #999 or white with the color you want. First color is for the category being used, and second color is for other categories.Get color codes here:https://htmlcolorcodes.com/*/
+#status-menu .status-button.on{
+	color: #10e0f9 !important;
+}
+#status-menu .status-button{
+	color: white !important;
+}
+#status-menu .status-button:not(.on):hover {
+	background: #1b0133 ;
+}
+#status-menu .status-button:hover{
+	color: #10e0f9 !important;
+}
+
+
+/* SORT BY AND LINKS COLORS
+First color is for the strip behind the sort links. Second color is for Sort By: and third color is for the following links on the right of it (Anime Title, Score, etc).Fourth color is the background behind the links on hover. Get color codes here:https://htmlcolorcodes.com/*/
+.list-table-header{
+	background: #1b0133 !important;
+}
+.list-table-header::before {
+	color: white;
+}
+
+	.list-unit .list-status-title .stats a,
+	#advanced-options-button, .list-table .list-table-header .header-title .link.sort{
+	color: white !important;
+}
+
+
+	.list-unit .list-status-title .stats a:hover,
+	#advanced-options-button:hover, .list-table .list-table-header .header-title .link.sort:hover {
+	background: #016d7e;
+		color: white !important;	
+}
+
+
+
+
+
+
+/* WALLPAPER
+To change background images: Upload the new background to Imgur or a similar site, then copy the direct link (or Original GIF link if it's animated) and paste it into the parenthesis. Save. To change the color, switch #f5f5f5 with the color you want like "black" or another color code and save. Get color codes here:https://htmlcolorcodes.com/*/
+body{
+	background-image: url() !important;
+	background-color: #0C162A;
+background-attachment: fixed;
+background-size: cover;
+}
+
+
+/* DECIMAL SCORES
+Replace the number or ID with the number that appears in the URL for the anime you want to add decimal scores to. For manga, also change anime to manga. Change the decimal amount with the number after content.*/
+.data.title a[href^="/anime/5525"] ~ .add-edit-more:before {
+	content:".5";
+}
+.data.title a[href^="/anime/48"] ~ .add-edit-more:before {
+	content:".5";
+}
+.data.title a[href^="/anime/ID"] ~ .add-edit-more:before {
+	content:".5";
+}
+.data.title a[href^="anime/ID"] ~ .add-edit-more:before {
+	content:".5";
+}
+.data.title a[href^="/anime/ID"] ~ .add-edit-more:before {
+	content:".5";
+}
+/* DECIMAL SCORES SETTINGS
+Change the text color here.*/
+.data.title .add-edit-more:before {
+	color: black;
+	position: absolute;
+	top: 0px;
+	left: 175px;
+	display: block;
+	width: 12px;
+	height: 20px;
+	font-weight: bold;
+	font-size: 12px;
+	pointer-events: none;
+}
+
+
+/* SCORES TAG COLORS
+Change the color code after background to the one you want. Get color codes from this page:https://htmlcolorcodes.com/
+The codes below are for each category's tag and decimal tag (you can make the decimals different tag colors).*/
+
+.list-table .list-table-data .data.status.reading ~ .data.score .link,
+.status.reading ~ .title .add-edit-more::before,
+.list-table .list-table-data .data.status.watching ~ .data.score .link,
+.status.watching ~ .title .add-edit-more::before {
+   background: #cfe88d;
+}
+.list-table .list-table-data .data.status.completed ~ .data.score .link,.status.completed ~ .title .add-edit-more::before {
+	background: #ffff92;
+}
+.list-table .list-table-data .data.status.onhold ~ .data.score .link,.status.onhold ~ .title .add-edit-more::before {
+	background: #afb8e2;
+}
+.list-table .list-table-data .data.status.dropped ~ .data.score .link,.status.dropped ~ .title .add-edit-more::before {
+	background: #fc7671;
+}
+
+
+
+/* LIST FONT COLORS
+Change the color code after background to the one you want. Get color codes from this page:
+https://www.hexcolortool.com/
+*/
+body,.list-table .list-table-data .data.volume a,.list-table .list-table-data .data.progress,.list-table .list-table-data .data.chapter a,.list-table .list-table-data .data.studio,.list-table .list-table-data .data.licensor,.list-table .list-table-data .data.progress a,.list-table .list-table-data .data.magazine a,.list-table .list-table-data .data.studio a,.list-table .list-table-data .data.licensor a,.list-table .list-table-data .data.tags a,.list-table .list-table-data .tags .edit{
+	color: black !important;
+}
+body{
+	font: 300 11px Open Sans;
+}
+
+
+/* TEXT OUTSIDE COVERS*/
+.list-table .list-table-data .data.season a,.list-table .list-table-data .data.season,.list-table .list-table-data .data a,.list-table .list-table-data .data.title a,
+.list-table .list-table-data .data.rated,.list-table .list-table-data .data.started,.list-table .list-table-data .data.finished,.list-table .list-table-data .data.airing-started,
+.list-table .list-table-data .data.airing-finished,
+.list-table .list-table-data .data.priority{
+	color: white !important;
+}
+
+.list-table .list-table-data:hover .data .add a,.list-table .list-table-data:hover .data .edit a{
+	color: white !important;
+	text-decoration: none;
+}
+.list-table .list-table-data:hover .data.season a{
+	color: white !important;
+}
+
+
+
+/* ANIME TITLE */
+.list-table .list-table-data .data.title .link{
+	color: #333 !important;
+}
+/* LINKS ON HOVER*/
+.list-table .list-table-data .data a:not(.edit-disabled):hover{
+	color: !important;
+}
+
+
+
+
+/* PAGE BOTTOM TEXT*/
+.list-unit .list-stats{
+	color: #777 !important;
+}
+#copyright{
+	color: #777 !important;
+}
+
+	.list-unit .list-stats {
+	    background-color: #1b0133 !important;	
+		  color: white !important;	
+	}
+
+/* COVER OVERLAY
+Normally, its white with slight transparency, but you can change it here.
+Change the color code after background to the RGBA colors you want. Get new RGBA codes with an RGBA CSS generator:https://www.hexcolortool.com/
+*/
+.list-table .list-table-data:hover .data.title {
+	background: rgba(255,255,255,0.8);
+	outline: 3px solid white;
+}
+/* FOOTER */
+#footer-block {
+	background: transparent !important;
+	margin-top: 20px;
+}
+
+
+
+				/* OTHER CODES*/	
+			
+			
+			
+		.list-table .list-table-data:hover .data .edit a{	
+			font-size: 11px;	
+			color: ;	
+		}	
+		*:not(a:hover):not(input) {	
+			cursor: default;	
+		}	
+		a:link, a:active, a:visited {	
+			color: black;	
+		}	
+	.header .header-title, .header .header-menu .btn-menu,#header-menu-dropdown svg, 		
+			[data-work="anime"] .icon-menu.anime-list, [data-work="manga"] .icon-menu.manga-list,[data-owner=""] .list-menu-float, 		
+			.list-menu-float .icon-menu.setting, form[action],.list-menu-float .icon-menu .text,		
+			.list-unit .list-status-title .text, 		
+			.list-table .list-table-header .header-title.status,		
+			.list-table .list-table-data .data.status,.list-table .list-table-data .data.status.plantowatch ~ .data.score,.cover-block,		
+			
+			i.fa:not([class*=sort]):not([class$=circle]), img, .icon-watch.ml4{		
+				display: none;		
+			}	
+		.header {	
+			width: 100%;	
+			height: 480px;	
+		}	
+		.header .header-menu.other {	
+			position: static;	
+			color: #999;	
+			text-align: left;	
+			text-transform: uppercase;	
+		}	
+		.header .header-menu.other .btn-menu {	
+			font: 700 25px Open Sans;	
+			color: #999;	
+			display: inline-block;	
+			overflow: hidden;	
+			text-indent: -116px;	
+			position: relative;	
+			top: 13px;	
+			left: 18px;	
+		}	
+		.header .header-menu .header-info {	
+			position: absolute;	
+			top: 17px;	
+			right: 257px;	
+			font-size: 0;	
+		}	
+		.header .username {	
+			font-weight: 700;	
+		}	
+		.header a, #header-menu-dropdown a {	
+			width: auto;	
+			height: auto;	
+			font-weight: 400;	
+			color: #999 !important;	
+			transition: none;	
+		}	
+		.header .header-menu .header-info a, #header-menu-dropdown a {	
+			font-size: 11px;	
+			margin: 0 15px;	
+		}	
+		.header .header-menu .header-info a:hover, #header-menu-dropdown a:hover {	
+			background: none;	
+			text-decoration: none;	
+		}	
+		#header-menu-dropdown {	
+			display: block!important;	
+			top: 23px;	
+			right: 182px;	
+			background: none;	
+			border: 0;	
+			box-shadow: none;	
+		}	
+		.list-menu-float {	
+			position: absolute;	
+			top: 23px;	
+			right: 185px;	
+			width: auto;	
+			border: 0;	
+		}	
+		.list-menu-float .icon-menu {	
+			display: inline-block;	
+			width: 16px;	
+			height: 16px;	
+			background: none !important;	
+			margin: 0 5px;	
+		}	
+		.list-menu-float .icon-menu svg.icon {	
+			position: static;	
+			width: 16px;	
+			height: 16px;	
+			fill: #aaa;	
+		}	
+		.list-menu-float .icon-menu:hover svg.icon, .header .header-menu .list-menu .icon-menu .text {	
+			position: static;	
+			fill: #ef8577;	
+		}	
+		.list-menu-float .icon-menu:not(.profile):hover {	
+			width: auto;	
+			background: none;	
+		}	
+		.list-menu-float .icon-menu.profile {	
+			background: none !important;	
+		}	
+		.list-menu-float .icon-menu.profile:before {	
+			content: '\f007';	
+			font: 16px FontAwesome;	
+			color: #aaa;	
+			line-height: 15px;	
+			position: absolute;	
+			right: 2px;	
+		}	
+		.list-menu-float .icon-menu.profile:hover:before {	
+			color: #ef8577;	
+		}	
+		.list-container {	
+			background: none !important;	
+			width: 100%;	
+			border: 0;	
+		}	
+		#status-menu, .status-menu-container.fixed {	
+			width: 100%;	
+			height: auto;	
+			border: 0;	
+			position: static;	
+		}	
+		#status-menu .status-menu {	
+			width: 100%;	
+			border-spacing: 0;	
+			text-align: center;	
+		}	
+		#status-menu .status-menu:before {	
+			content: '';	
+			display: inline-block;	
+			width: 90px;	
+			height: 90px;	
+			border-radius: 50%;	
+			position: absolute;	
+			margin-top: -20px;	
+		}	
+		#status-menu .status-button {	
+			display: inline-block;	
+			font: 300 13px Open Sans;	
+			color: white;	
+			letter-spacing: 1px;	
+			text-transform: uppercase;	
+			padding: 15px 20px;	
+		}	
+		#status-menu .status-button:first-child {	
+			margin-left: 100px;	
+		}	
+		#header-menu-button, #status-menu .status-button.on {	
+			cursor: default;	
+			font-weight: 700;	
+			text-decoration: none;	
+		}	
+		#status-menu .status-button::after {	
+			background: none;	
+		}	
+		#status-menu .status-button.on::after {	
+			background: none;	
+			left: calc(50% - 20px);	
+			bottom: -19px;	
+			width: 0;	
+			height: 0;	
+			border-left: 20px solid transparent;	
+			border-right: 20px solid transparent;	
+		}	
+		#status-menu .search-container {	
+			top: -475px;	
+			right: 20px;	
+		}	
+		#status-menu #search-box {	
+			width: 150px;	
+			height: auto;	
+		}	
+		#search-box input {	
+			background: white 3px 50%/20px no-repeat url(https://image.myanimelist.net/ui/ueQLRyZL_yQZxD14iYLZC_gLr-mtem_jVqxnLpUY6LHlp_sr_ZwRrhNpbh7nV5sCeo7Sp3-sdxOAu1kTqLeHfW7i3YHTvUNvkDS5qKJPeIQyZ4XG2BGDzLdXX1QvKlrJ);	
+			font: 300 11px Open Sans;	
+			color: #999;	
+			padding: 4px 12px 6px 25px;	
+			border: 1px solid #ddd;	
+			border-radius: 10px;	
+		}	
+		.list-block, .status-menu-container.fixed + div.list-block {	
+			margin-top: 30px;	
+			min-height: 0;	
+		}	
+		.list-unit {	
+			width: 80%;	
+		}	
+		.list-unit .list-status-title {	
+			display: inline-block;	
+			width: calc(100% - 30px);	
+			height: 0;	
+			background: none;	
+			text-align: right;	
+			margin: auto;	
+		}	
+	.list-unit .list-status-title .stats {		
+				height: 0;		
+				line-height: 100%;		
+				top: 128px !important;		
+				left: 900px !important;	
+				position: relative;	
+				color: black !important;	
+			}	
+		.list-unit .list-stats {	
+			position: absolute;	
+			display: block;	
+			bottom: 0px;	
+			width: 80%;	
+			height: auto;	
+			background: none;	
+			font: normal 11px Open Sans;	
+			color: #777;	
+			text-transform: uppercase;	
+		}	
+	.list-table .list-table-header .header-title .link.sort {		
+				font-weight: normal;		
+				color: #999;		
+				text-transform: uppercase;		
+				padding: 4px 6px;		
+				z-index: 1;		
+			}	
+		.list-table > tbody:nth-of-type(2n+1):first-of-type {	
+			display: block;	
+			Width: 100%;	
+			height: auto;	
+			margin: 20px;	
+			background: none;	
+			text-transform: uppercase;	
+			z-index: 3;	
+		}	
+		.list-table-header {	
+			display: inline-block;	
+			width: 100%;	
+		}	
+		.list-table-header:before {	
+			content: 'Sort by:';	
+			position: relative;	
+			top: 2px;	
+			margin-right: 12px;	
+		}	
+		.list-table .list-table-header .header-title {	
+			display: inline-block;	
+			width: auto !important;	
+			height: auto;	
+			background: none;	
+			border: 0;	
+			padding: 0 !important;	
+			margin: 0 15px;	
+		}	
+		.list-table .list-table-header .header-title .link.sort:hover, #advanced-options-button:hover {	
+			color: #999;	
+		}	
+		.list-table .list-table-header .header-title .sort-icon {	
+			color: rgba(239,133,119,.65);	
+			font-size: 18px;	
+			position: relative;	
+			line-height: 0;	
+		}	
+		.fa-sort-asc {	
+			top: 6px;	
+		}	
+		.fa-sort-desc {	
+			top: -2px;	
+		}	
+		.fa-plus-circle::before {	
+			content: '+' !important;	
+			margin-left: 1px;	
+		}	
+		.list-table {	
+			border: 0;	
+			text-align: center;	
+		}	
+		.list-item, .list-table > tbody:nth-of-type(2n+1):not(:first-child) {	
+			width: 200px;	
+			height: 290px;	
+			display: inline-block;	
+			background: none;	
+			margin: 15px;	
+		}	
+		.list-table .list-table-data .data {	
+			position: absolute;	
+			width: 200px;	
+			height: 280px;	
+			border: 0;	
+			padding: 0;	
+		}	
+			
+		.list-table .list-table-data .data.finished,.list-table .list-table-data .data.started,.list-table .list-table-data .data.storage,.list-table .list-table-data .data.airing-finished,.list-table .list-table-data .data.airing-started,.list-table .list-table-data .data.rated ,.list-table .list-table-data .data.licensor,.list-table .list-table-data .data.season,.list-table .list-table-data .data.studio,.list-table .list-table-data .data.title .link,.list-table .list-table-data .data.progress,.list-table .list-table-data .data.type,.list-table .list-table-data .data .edit a:after,.list-table .list-table-data .data.title span,.list-table .list-table-data .data.season,.list-table .list-table-data .data.days,.list-table .list-table-data .data.studio,.list-table .list-table-data .data.magazine,.list-table .list-table-data .data.chapter,.list-table .list-table-data .data.volume{	
+			opacity: 0;	
+		}	
+		.list-table .list-table-data:hover .data.finished,.list-table .list-table-data:hover .data.started,.list-table .list-table-data:hover .data.storage,.list-table .list-table-data:hover .data.airing-finished,.list-table .list-table-data:hover .data.airing-started,.list-table .list-table-data:hover .data.rated ,.list-table .list-table-data:hover .data.licensor,.list-table .list-table-data:hover .data.title .link,.list-table .list-table-data:hover .data.progress,.list-table .list-table-data:hover .data.type,.list-table .list-table-data:hover .data .edit a:after,.list-table .list-table-data:hover .data.title span,.list-table .list-table-data:hover .data.tags,.list-table .list-table-data:hover .data.days,.list-table .list-table-data:hover .data.season,.list-table .list-table-data:hover .data.studio,.list-table .list-table-data:hover .data.magazine,.list-table .list-table-data:hover .data.chapter,.list-table .list-table-data:hover .data.volume{	
+			opacity: 1;	
+			visibility: visible !important;	
+		}	
+		.list-table .list-table-data .data.title {	
+			letter-spacing: 0;	
+			padding: 0;	
+		}	
+		.list-table .list-table-data .data.title .link {	
+			position: absolute;	
+			left: 13px;	
+			bottom: 43px;	
+			width: 160px;	
+			z-index: 51 !important;	
+			opacity: 0;	
+			font-size: 20px;	
+			line-height: 22px;	
+			text-transform: upper;	
+		}	
+		.list-table .list-table-data .data.score {	
+			text-align: right;	
+		}	
+		.list-table .list-table-data .data.score .link {	
+			font-weight: 700;	
+			text-align: right!important;	
+			margin-right: 10px;	
+			padding: 4px 6px;	
+			word-spacing: -3px;	
+		}	
+		.list-table .list-table-data .data.score .link:after {	
+			content: ;	
+		}	
+		.progress div:before {	
+			content: 'Progress: ';	
+			position: absolute;	
+			font-size: 12px;	
+			margin-top: -15px;	
+			margin-left: 0px;	
+			padding-right:5px;	
+		}	
+		.list-table .list-table-data .data.progress {	
+			width: auto;	
+			position: absolute;	
+			height: auto;	
+			margin-top: 255px;	
+			margin-left: 13px;	
+			font: italic 18px Open Sans;	
+			word-spacing: -3px;	
+			opacity: 0;	
+		}	
+		.data.chapter div:before {	
+			content: 'Chapters: ';	
+			position: absolute;	
+			font-size: 12px;	
+			margin-top: -15px;	
+			margin-left: 0px;	
+			padding-right:5px;	
+		}	
+		.list-table .list-table-data .data.chapter{	
+			position: absolute;	
+			margin-top: 244px;	
+			margin-left: 5px;	
+			width: auto;	
+			position: absolute;	
+			height: auto;	
+			margin-top: 255px;	
+			font: italic 18px Open Sans;	
+			word-spacing: -3px;	
+			opacity: 0;	
+		}	
+		.data.volume div:before {	
+			content: 'Volumes: ';	
+			position: absolute;	
+			font-size: 12px;	
+			margin-top: -15px;	
+			margin-left: 0px;	
+			padding-right:5px;	
+		}	
+		.list-table .list-table-data .data.volume{	
+			position: absolute;	
+			margin-top: 255px;	
+			margin-left: 65px;	
+			width: auto;	
+			position: absolute;	
+			height: auto;	
+			font: italic 18px Open Sans;	
+			word-spacing: -3px;	
+			opacity: 0;	
+		}	
+		.list-table .list-table-data .data.type {	
+			width: 100px;	
+			text-align: right;	
+			height: auto;	
+			margin-left: 125px;	
+			opacity: 0;	
+			margin-top: 245px;	
+			font-size: 11px;	
+			text-align: center;	
+		}	
+		.list-table .list-table-data .data.title .rewatching,.list-table .list-table-data .data.title .rereading,.list-table .list-table-data .data.title .content-status {	
+			position: absolute;	
+			top: 2px;	
+			left: 20px;	
+			font: 600 9px Open Sans;	
+			color: #444;	
+			border: 1px solid #555;	
+			padding: 2px 4px;	
+			opacity: 0;	
+			text-transform: uppercase;	
+		}	
+		.list-table .list-table-data .data.title .add-edit-more {	
+			font-size: 0;	
+			float: none;	
+			z-index: 5;	
+			position: relative;	
+			top: 0;	
+			left: 5px;	
+		}	
+		.list-table .list-table-data .data.image a {	
+			width: 200px;	
+			height: 280px;	
+			background-size: contain;	
+			background-position: center;	
+			background-repeat: no-repeat;	
+		}	
+		.list-table .list-table-data .data a, .list-table .list-table-data a.edit-disabled {	
+			color: black !important;	
+		}	
+			
+			
+			
+			
+		#copyright {	
+			font: 400 8px Open Sans;	
+			letter-spacing: 1px;	
+			color: #777;	
+			text-transform: uppercase;	
+		}	
+		.list-table .list-table-data .data.score .link:after {	
+			content: ".0"	
+		}	
+		.list-table .list-table-data .data.tags{	
+			margin-top: 60px;	
+			visibility: hidden;	
+			width: 180px;	
+			padding-left: 10px;	
+		}	
+		.list-table .list-table-data .data.tags a{	
+			position: relative;	
+			z-index: 10000 !important;	
+		}	
+		.list-table .list-table-data .data.studio a{	
+			top: 0px !important;	
+			left: 0px;	
+			position: relative;	
+		}	
+		.list-table .list-table-data .data.studio{	
+			position: absolute;	
+			height: 10px !important;	
+		}	
+		.list-table .list-table-data .data.season a{	
+			top: 260px !important;	
+			position: relative;	
+		}	
+		.list-table .list-table-data .data.season{	
+			position: absolute;	
+			height: 10px !important;	
+			margin-left: 0px;	
+			margin-top: -279px;	
+			font: italic 11px Open Sans;	
+		}	
+		.list-table .list-table-data .data.priority {	
+			margin-top: -20px;	
+		}	
+		.list-table .list-table-data .data.priority:after {	
+			content: " Priority";	
+		}	
+		.list-table .list-table-data:hover .data.priority {	
+			opacity: 0;	
+		}	
+		.list-table .list-table-data .data.studio {	
+			position: absolute !important;	
+			height: 10px !important;	
+			margin-top: 18px;	
+			margin-left: 0;	
+			z-index: 10000 !important;	
+		}	
+		.list-table .list-table-data .data.licensor,.list-table .list-table-data .data.magazine{	
+			position: absolute;	
+			height: 10px !important;	
+			margin-top: 40px;	
+			margin-left: 0px;	
+			text-align: center;	
+			z-index: 10000 !important;	
+		}	
+		.list-table .list-table-data .data.rated {	
+			position: absolute;	
+			height: 10px !important;	
+			margin-top: -20px;	
+			margin-left: 80px;	
+		}	
+		.list-table .list-table-data .data.airing-started{	
+			position: absolute;	
+			height: 10px !important;	
+			margin-top: -35px;	
+			margin-left: -40px;	
+		}	
+		.list-table .list-table-data .data.airing-finished{	
+			position: absolute;	
+			height: 10px !important;	
+			margin-top: -35px;	
+			margin-left: 35px;	
+		}	
+		.list-table .list-table-data .data.storage{	
+			position: absolute;	
+			margin-top: -35px;	
+			margin-left: -65px;	
+		}	
+		.list-table .list-table-data .data.started{	
+			position: absolute;	
+			margin-top:285px;	
+			margin-left: -55px;	
+		}	
+		.list-table .list-table-data .data.started:before{	
+		content: "Started: ";	
+		}	
+		.list-table .list-table-data .data.finished{	
+			position: absolute;	
+			margin-top: 285px;	
+			margin-left: 55px;	
+		}	
+		.list-table .list-table-data .data.finished:before{	
+		content: "Finished: "		
+		}	
+		.list-table .list-table-data .data.number {	
+			margin-left: -92px;	
+			position: absolute;	
+			margin-top: 0px;	
+			opacity: 0;	
+			z-index: 100 !important;	
+			pointer-events: none !important;	
+		}	
+		.list-table .list-table-data:hover .data.number {	
+			opacity: 1 !important;	
+		}	
+		.list-table .list-table-data .data.days{	
+			position: absolute;	
+			margin-top: 264px;	
+			margin-left: 80px;	
+		}	
+		.list-table .list-table-data .data.days:after{	
+			content: " days"	
+		}	
+		.list-table .list-table-data .data.title .content-status{	
+			margin-left: 50px;	
+		}	
+		.list-table .rereading{	
+			margin-left: 50px;	
+		}	
+		.list-table .list-table-data:hover .data .edit a{	
+			background: transparent;	
+			content:"";	
+			height: 240px;	
+			width: 100%;	
+			left:0;	
+			top:0;	
+			position: absolute;	
+			display: block;	
+			z-index: 50 !important;	
+		}	
+		.list-table .list-table-data .data.title .add-edit-more{	
+			margin-left: -7px;	
+		}	
+		.header .header-menu .header-info a:hover, #header-menu-dropdown a:hover,.header .header-menu .header-info a:hover,.header .header-menu .list-menu .icon-menu .text:hover,.list-menu-float .icon-menu svg.icon:hover,.list-menu-float .icon-menu.profile:hover:before{	
+			cursor: pointer;	
+		}	
+		.list-container a.List_LightBox:link{	
+			width: 220px !important;	
+			height: 310px !important;	
+			padding-right: 0px;	
+			padding-bottom: 00px;	
+			top: -20px !important;	
+			position: absolute;	
+			font-size: 12px;	
+		}	
+		.list-table .list-table-data .tags .edit{	
+			position: relative !important;	
+			margin-left: -5px;	
+			pointer-events: auto !important;	
+			padding: 5px;	
+		}	
+		.list-table .list-table-data .tags .edit:after{	
+			content: " Tags"	
+		}	
+		.list-table .list-table-data .data.progress .fa{	
+			font-size: 22px !important;	
+			position: absolute;	
+			z-index: 10000 !important;	
+			padding: 10px;	
+			top: -10px;	
+			margin-left: -5px;	
+		}	
+		.list-table .list-table-data .data.chapter .fa,.list-table .list-table-data .data.volume .fa{	
+			font-size: 22px !important;	
+			position: absolute;	
+			z-index: 10000 !important;	
+			padding: 2px;	
+			top: -3px;	
+			margin-left: 2px;	
+		}	
+		.fa:hover{	
+			
+		}	
+		.list-table .list-table-data .data.chapter span,.list-table .list-table-data .data.volume span,.list-table .list-table-data .data.progress span{	
+			z-index: 10000 !important;	
+			position: relative !important;	
+		}	
+		.list-table .list-table-data .data.chapter span a:before,.list-table .list-table-data .data.volume span a:before,.list-table .list-table-data .data.progress span a:before{	
+			position: absolute;	
+			content: "";	
+			left: -20px;	
+			top: -0px;	
+			padding: 10px;	
+		}	
+			
+		.list-table .list-table-data .data.progress .fa:hover,	
+		.list-table .list-table-data .data.chapter .fa:hover,	
+		.list-table .list-table-data .data.volume .fa:hover	
+		{	
+		color: blue;	
+		text-decoration: underline;	
+				
+		}	
+			
+		.list-table .list-table-header .header-title.number,	
+		.list-table .list-table-header .header-title.image,	
+		.list-table .list-table-header .header-title.tags,	
+		.list-table .list-table-header .header-title.days,	
+		.list-table .list-table-header .header-title.storage,	
+		.list-table .list-table-header .header-title.studio,	
+		.list-table .list-table-header .header-title.licensor,	
+		.list-table .list-table-header .header-title.started	
+		{	
+		display: none;		
+				
+		}	
+			
+		#recaptcha-terms {	
+		    display: none;	
+		}
+		
+		
+	.status-menu-container.fixed {
+	    position: fixed !important;
+	    display: block !important;
+	    top: 0 !important;
+		z-index: 10 !important;
+	}
+	
+	.status-menu-container.fixed .status-menu:before{
+	display: none !important;
+	}
+	
+	.status-menu-container,
+	.status-menu:before{
+	z-index: 10 !important;
+	}
+	
+	
+	.header .header-menu .header-info,
+	.list-menu-float, 
+	#header-menu-dropdown,
+	.header .header-menu.other .btn-menu,
+	#status-menu .search-container  {
+	    z-index: 100 !important;
+		
+	}
+	.list-table .list-table-data .data.licensor a, 
+	.list-table .list-table-data .data.magazine a,
+	.list-table .list-table-data .data.studio a, 
+	.list-table .list-table-data .data.licensor, 
+	.list-table .list-table-data .data.magazine,
+	.list-table .list-table-data .data.studio, 
+	.list-table .list-table-data .data.title .link,
+	.list-table .list-table-data .data.tags a,
+	.list-table .list-table-data .data a, 
+	.list-table .list-table-data a.edit-disabled{
+	    z-index: 6 !important;
+	}
+	
+	
+	
+		        	
+			
+	
+	.list-table .list-table-data .data.title .add-edit-more{		
+			margin-left: -5px;		
+	}		
+		
+	.list-unit .list-status-title .stats{	
+	z-index: 5 !important;	
+	position: absolute;	
+	left: 0%;	
+	right: 0%;	
+	margin: 0 auto;	
+	width: 100px !important;	
+	margin-top: -102px;	
+	left: 940px !important;	
+	z-index: 6 !important;	
+	}	
+		
+		
+		
+	.list-unit .list-stats {	
+	    display: none;	
+	    width: 1024px;	
+	    height: 30px;	
+	    line-height: 30px;	
+	    text-align: center;	
+	    position: fixed;	
+	    bottom: 0;	
+	    left: 0;	
+		  right: 0;	
+		  margin: auto;	
+	    z-index: 10;		
+	}	
+	            
+					body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+#qc-cmp2-container,
+.qc-cmp-button,
+.qc-cmp-ui,
+.qc-cmp-ui .qc-cmp-main-messaging,
+.qc-cmp-ui .qc-cmp-messaging,
+.qc-cmp-ui .qc-cmp-beta-messaging,
+.qc-cmp-ui .qc-cmp-title,
+.qc-cmp-ui .qc-cmp-sub-title,
+.qc-cmp-ui .qc-cmp-purpose-info,
+.qc-cmp-ui .qc-cmp-table,
+.qc-cmp-ui .qc-cmp-table-header,
+.qc-cmp-ui .qc-cmp-vendor-list,
+.qc-cmp-ui .qc-cmp-vendor-list-title,
+.qc-cmp-publisher-purposes-table .qc-cmp-table-header,
+.qc-cmp-publisher-purposes-table .qc-cmp-table-row,
+.qc-cmp-button.qc-cmp-secondary-button,
+#qc-cmp2-container *{
+display: none !important;
+pointer-events: none !important;
+visibility: hidden !important;
+opacity: 0 !important;
+}
+
+.list-table .list-table-data .data.storage {
+    position: absolute;
+    margin-top: 235px;
+    margin-left: 10px;
+}
+ 
+.list-table .list-table-data .data.type {
+    margin-top: 240px;
+  }
+ 
+ 
+.list-table .list-table-data .data.days {
+    margin-top: 261px;
+}
+            
+
+
+
+.list-table .list-table-data .data.title .content-status,
+.list-table .list-table-data .data.title .rewatching,
+.list-table .list-table-data .data.title .rereading,
+.list-table .list-table-data .data.title .content-status {
+
+margin: 0 auto;
+position: absolute;
+left: 0px;
+right: 0px;
+width: 80px;
+text-align: center;
+
+}
+
+
+
+.list-table .list-table-data .data.chapter * {
+font-size: 14px;
+}
+
+.list-table .list-table-data .data.volume * {
+font-size: 14px;
+}
+
+.list-table .list-table-data .data.volume {
+	margin-left: 85px;}
+
+.list-table .list-table-data .data.retail{
+margin-top: 23px;
+}
+
+
+.list-table .list-table-data .data.retail{
+opacity: 0;
+}
+
+.list-table .list-table-data:hover .data.retail{
+opacity: 1;
+}
+
+.list-table .list-table-data .data.retail:after{
+content: "copies owned";
+}
+
+.list-table .list-table-header .header-title.magazine,
+.list-table .list-table-header .header-title.retail{
+display: none;
+}
+
+.list-table .list-table-data .data.title .content-status,
+.list-table .list-table-data .data.title .rewatching,
+.list-table .list-table-data .data.title .rereading,
+.list-table .list-table-data .data.title .content-status {
+	top: 0;
+}
+
+
+.list-table .list-table-data .studio{
+margin-top: 24px !important;	
+}
+
+.list-table .list-table-data .data.licensor,
+.list-table .list-table-data .data.magazine{
+	margin-top: 44px !important;
+	
+}
+
+.list-table .list-table-data .data.tags{
+	margin-top: 68px !important;
+}
+
+            
+.list-table .list-table-data .airing-started:before{
+content: "Debuted: ";
+}
+
+    
+.list-table .list-table-data .airing-finished:before{
+	content: "Ended: ";
+}
+
+.list-table .list-table-data .airing-started{
+margin-left: -55px !important;
+}
+
+.list-table .list-table-data .airing-finished{
+margin-left: 60px !important;
+}
+
+.list-table .list-table-data .data.studio span, 
+.list-table .list-table-data .data.licensor , 
+.list-table .list-table-data .data.magazine{height: 20px !important;overflow:hidden;white-space:initial;}
+
+.list-container a.List_LightBox:link{
+text-decoration: none !important;	
+}
+
+
+.list-table .list-table-data .data.score .link {
+Z-INDEX: 1000 !important;
+position: relative;
+pointer-events: inherit;
+}
+
+/* DARK OVERLAY ON ANIME/MANGA
+Shows up when you point the cursor to them. This will override the original codes used to customize some of the colors and overlay.
+*/
+
+.list-table .list-table-data:hover .data.title {
+	background: rgba(5,5,5,0.8);
+	outline: 3px solid  rgba(45,45,45,0.8);
+}
+
+
+/* OVERLAY FONT COLOR */
+body,.list-table .list-table-data .data.volume a,.list-table .list-table-data .data.progress,.list-table .list-table-data .data.chapter a,.list-table .list-table-data .data.studio,.list-table .list-table-data .data.licensor,.list-table .list-table-data .data.progress a,.list-table .list-table-data .data.magazine a,.list-table .list-table-data .data.studio a,.list-table .list-table-data .data.licensor a,.list-table .list-table-data .data.tags a,.list-table .list-table-data .tags .edit{
+	color: rgb(232, 230, 227) !important ;
+}
+
+.list-table .list-table-data .data.progress .fa:hover{
+	color: #90ee90;
+}
+
+/* ANIME TITLE */
+.list-table .list-table-data .data.title .link{
+	color: #C8C3BC !important;
+}
